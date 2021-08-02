@@ -1,0 +1,7 @@
+{
+  "name": "ventassarmientobryan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

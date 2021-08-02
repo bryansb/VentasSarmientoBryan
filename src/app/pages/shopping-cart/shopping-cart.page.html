@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-menu-button></ion-menu-button> -->
+      <ion-back-button defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title><ion-title>Carrito de Compras</ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+    <ion-list>
+      <ion-list-header>
+        <h2>{{ title }}</h2>
+      </ion-list-header>
+
+      <ion-item *ngFor="let p of products | async" >
+        <ion-avatar slot="start">
+          <img src="{{p.image}}">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ p.name }}</h2>
+          <h3>$ {{ p.price }}</h3>
+        </ion-label>
+        <ion-button  color="danger" size="small" (click)="removeFromShoppingCart(p)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="callStore()">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

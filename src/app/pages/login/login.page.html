@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center>
+
+  <p align="center">
+    <img src="https://img.freepik.com/vector-gratis/logotipo-empresa-comercial-mercado-callejero_23-2148462526.jpg?size=338&ext=jpg" alt="Logo"/>
+  </p>
+
+  <ion-item>
+    <ion-label>Email:</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña:</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="loginWithEmail()">Ingresar con Email</ion-button>
+  <ion-button expand="block"  (click)="loginWithGoogle()">Ingresar con Google</ion-button>
+
+</ion-content>
